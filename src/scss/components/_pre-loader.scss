@@ -1,0 +1,17 @@
+.pre-loader {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--gray);
+    display: none;
+
+    i {
+        color: var(--primary);
+        font-size: 50px;
+        animation: rotate 2s linear infinite;
+    }
+}

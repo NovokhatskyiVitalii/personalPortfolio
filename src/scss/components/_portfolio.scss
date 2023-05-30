@@ -1,0 +1,108 @@
+.portfolios {
+    display: none;
+
+    .portfolio-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        color: var(--white);
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 30px;
+        grid-auto-rows: minmax(100px, auto);
+
+        .portfolio {
+            .img {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                height: 200px;
+                border: 1px solid var(--white);
+                border-radius: 10px;
+                position: relative;
+                background-image: url(/src/images/screenshot/mac-outlet.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+
+                &.pi2 {
+                    background-image: url();
+                }
+
+                &.pi3 {
+                    background-image: url();
+                }
+
+                &.pi4 {
+                    background-image: url();
+                }
+
+                &.pi5 {
+                    background-image: url();
+                }
+
+                &.pi6 {
+                    background-image: url();
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    opacity: 0;
+                    border-radius: 10px;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    transition: opacity .3s;
+                    backdrop-filter: blur(2px);
+                    background-color: rgba(9, 32, 43, 0.493);
+                }
+
+                &:hover::before {
+                    opacity: 1;
+                }
+
+                p {
+                    width: 80%;
+                    z-index: 1;
+                    opacity: 0;
+                    transition: opacity .3s;
+                    margin-bottom: 20px;
+                    color: white;
+                }
+
+                button {
+                    opacity: 0;
+                    transition: opacity .3s;
+                }
+
+                &:hover p,
+                &:hover button {
+                    opacity: 1;
+                }
+            }
+
+        }
+    }
+
+    @media screen and (max-width:905px) {
+        .portfolio-container {
+            grid-template-columns: repeat(1, 1fr);
+            grid-auto-rows: minmax(100px, auto);
+
+            .portfolio {
+                width: 300px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+
+// // .portfolio .img:hover p,
+// // .portfolio .img:hover button {
+// //     opacity: 1;
+// // }

@@ -1,0 +1,115 @@
+header {
+    position: relative;
+    width: 100%;
+    background-color: var(--black);
+
+    .navbar {
+        padding: 40px 100px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        .logo {
+            color: var(--white);
+            user-select: none;
+        }
+
+        ul {
+            margin-left: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            transition: all .3s;
+
+            li {
+                a {
+                    color: var(--white);
+                    margin: 0 20px;
+
+                    &.active {
+                        padding-bottom: 8px;
+                        border-bottom: 2px solid var(--primary);
+                    }
+                }
+
+                &:hover a:not(.active) {
+                    color: var(--primary);
+                }
+            }
+        }
+
+        .ham-btn {
+            color: var(--white);
+            font-size: 25px;
+            display: none;
+
+            &:hover {
+                color: var(--primary);
+                transform: scale(1.1);
+            }
+        }
+
+    }
+
+    // .navbar ul li .navbar ul li:hover a:not(.active) {
+    //     color: var(--primary);
+    // }
+
+    @media screen and (max-width:905px) {
+
+        .navbar {
+            padding: 20px 40px;
+
+            ul {
+                position: absolute;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+                flex-direction: column;
+                top: 0;
+                left: 0;
+                display: none;
+                visibility: hidden;
+                opacity: 0;
+                transform: translateX(-50px) translateY(-50px);
+                width: 100vw;
+                height: 110vh;
+                z-index: 100;
+                display: none;
+                background-color: var(--black);
+
+                li {
+                    margin-top: 30px;
+
+                    a {
+                        font-size: 20px;
+                        position: relative;
+                        letter-spacing: 2px;
+                    }
+                }
+
+                &:before {
+                    content: 'Navigation';
+                    color: rgba(158, 158, 158, 0.158);
+                    font-size: 80px;
+                    font-weight: 900;
+                    text-transform: uppercase;
+                    font-family: 'Poppins', sans-serif;
+                    transform: translateY(230px) translateX(-50px) rotate(90deg);
+                }
+            }
+
+            .ham-btn {
+                display: block;
+                opacity: 1;
+                z-index: 100;
+                cursor: pointer;
+            }
+
+            .navbar .dis {
+                display: flex;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}

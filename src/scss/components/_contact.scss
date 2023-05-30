@@ -1,0 +1,40 @@
+.contact {
+    display: none;
+
+    .contact-container {
+        text-align: center;
+
+        .contact-form {
+            margin-top: 50px;
+
+            input {
+                margin-bottom: 10px;
+                height: 30px;
+                padding: 10px;
+                outline: none;
+                color: var(--white);
+                background-color: transparent;
+                border: 1px solid var(--white);
+                border-radius: 30px;
+                display: block;
+                width: 400px;
+            }
+
+            textarea {
+                color: var(--white);
+                margin-bottom: 30px;
+                height: 200px;
+                padding: 20px;
+                outline: none;
+                background-color: transparent;
+                border: 1px solid var(--white);
+                border-radius: 10px;
+                display: block;
+                width: 400px;
+                width: 400px;
+                resize: none;
+            }
+        }
+    }
+
+}

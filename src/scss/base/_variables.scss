@@ -1,0 +1,15 @@
+$black: #000;
+$white: #fff;
+$gray: #333;
+$primary: #8BFBFF;
+$secondary: #FB38C8;
+$third: #FF602A;
+
+:root {
+    --black: #{$black};
+    --white: #{$white};
+    --gray: #{$gray};
+    --primary: #{$primary};
+    --secondary: #{$secondary};
+    --third: #{$third};
+}
