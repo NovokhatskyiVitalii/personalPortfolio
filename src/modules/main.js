@@ -20,9 +20,10 @@ night.addEventListener("click", () => {
   day.style.display = "block";
 });
 
-const preloader = document.querySelector(".pre-loader");
-
-window.addEventListener("load", () => (preloader.style.display = "none"));
+window.addEventListener("load", () => {
+  const preloader = document.querySelector(".pre-loader");
+  preloader.style.display = "none";
+});
 
 const conbtn = document.querySelector(".conbtn");
 const navBtn1 = document.querySelector(".nav-btn1");
