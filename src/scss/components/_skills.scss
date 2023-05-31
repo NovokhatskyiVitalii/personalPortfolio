@@ -1,5 +1,7 @@
 .skills {
     display: none;
+    margin-block-start: 80px;
+
 
     h1 {
         margin-bottom: 15px;
@@ -39,7 +41,14 @@
         }
     }
 
+    &.sec-dis {
+        display: flex;
+    }
+
     @media screen and (max-width:905px) {
+        margin: 20px 0 40px 0;
+
+
         .skill-container {
             grid-template-columns: repeat(1, 1fr);
             grid-auto-rows: minmax(100px, auto);

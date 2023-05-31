@@ -88,6 +88,10 @@
         }
     }
 
+    &.sec-dis {
+        display: flex;
+    }
+
     @media screen and (max-width:905px) {
         .portfolio-container {
             grid-template-columns: repeat(1, 1fr);

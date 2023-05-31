@@ -21,7 +21,7 @@ body.dark {
     --white: #000;
     --gray: #333;
     --secondary: #8BFBFF;
-    --primary: #FB38C8;
+    --primary: #bbbcbc;
     --third: #FF602A;
 }
 
@@ -56,10 +56,6 @@ li {
         }
     }
 
-}
-
-.sec-dis {
-    display: flex;
 }
 
 @keyframes rotate {
