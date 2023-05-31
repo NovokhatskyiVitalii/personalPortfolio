@@ -2,11 +2,10 @@
     .row {
         display: none;
         width: auto;
-        margin: 60px 0 20px 150px;
+        margin: 60px 0 20px 0;
         justify-content: center;
 
         .about-me {
-            margin-top: 30px;
             flex-basis: 50%;
 
             h3 {
@@ -17,7 +16,7 @@
             }
 
             h1 {
-                line-height: 20px;
+                line-height: 40px;
                 font-size: 50px;
                 letter-spacing: -4px;
                 text-transform: uppercase;
@@ -46,16 +45,49 @@
         }
 
         .about-img {
-            flex-basis: 50%;
+            position: relative;
+
+            .image-link {
+                display: flex;
+                // justify-content: space-around;
+                justify-content: center;
+                gap: 30px;
+
+                span {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    background-color: var(--primary);
+                    display: block;
+                }
+
+                img {
+                    position: absolute;
+                    left: 10px;
+                    top: 10px;
+                    width: 30px;
+                    height: 30px;
+                }
+
+                .git {
+                    position: relative;
+                }
+
+                .linkedin {
+                    position: relative;
+
+                }
+
+            }
 
             img {
                 width: 370px;
-                transform: translateY(50px);
+
             }
         }
 
         &.sec-dis {
-            // display: flex;
+            display: flex;
         }
 
     }
@@ -70,28 +102,6 @@
             border-radius: 50%;
             background-color: var(--primary);
         }
-
-        // .linkedin {
-        //     top: 220px;
-        //     left: 55%;
-        // }
-
-        // .git {
-        //     top: 300px;
-        //     left: 51%;
-        // }
-    }
-
-    @media screen and (max-width:1200px) {
-        .row {
-            margin-left: 80px;
-        }
-    }
-
-    @media screen and (max-width:1060px) {
-        .row {
-            margin-left: 50px;
-        }
     }
 
     @media screen and (max-width:905px) {
@@ -103,7 +113,7 @@
 
             .about-me {
                 margin: 0;
-                margin-top: 50px;
+                margin-top: 20px;
                 flex-basis: 100%;
 
                 h1 {
@@ -118,9 +128,26 @@
 
             .about-img {
 
+                .image-link {
+
+                    &.git {
+                        left: 150px;
+                        bottom: 0px;
+                    }
+
+                    &.linkedin {
+                        top: 0px;
+                        left: 0px;
+
+                    }
+
+                }
+
                 img {
                     width: 200px;
                 }
+
+
             }
         }
 
@@ -135,6 +162,8 @@
     }
 
     @media screen and (max-width:420px) {
+        margin-top: 50px;
+
         .row {
             .about-me {
                 h1 {
@@ -143,6 +172,10 @@
 
                 h3 {
                     font-size: 30px;
+                }
+
+                .conbtn {
+                    margin-block-end: 20px;
                 }
             }
         }
