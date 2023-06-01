@@ -83,6 +83,21 @@
                 &:hover button {
                     opacity: 1;
                 }
+
+
+                &.is-active-background::before {
+                    opacity: 1;
+                }
+
+
+            }
+
+            &.is-active {
+
+                & p,
+                & button {
+                    opacity: 1;
+                }
             }
 
         }
@@ -100,6 +115,7 @@
             .portfolio {
                 width: 300px;
                 margin-bottom: 10px;
+
             }
         }
     }

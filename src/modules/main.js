@@ -1,5 +1,5 @@
-const hamBtn = document.querySelector(".ham-btn");
-const nav = document.querySelector(".nav");
+const hamBtn = document.querySelector(".ham-btn"),
+  nav = document.querySelector(".nav");
 
 hamBtn.addEventListener("click", () => {
   nav.classList.toggle("dis");
@@ -25,18 +25,18 @@ window.addEventListener("load", () => {
   preloader.style.display = "none";
 });
 
-const conbtn = document.querySelector(".conbtn");
-const navBtn1 = document.querySelector(".nav-btn1");
-const navBtn2 = document.querySelector(".nav-btn2");
-const navBtn3 = document.querySelector(".nav-btn3");
-const navBtn4 = document.querySelector(".nav-btn4");
-const navBtn5 = document.querySelector(".nav-btn5");
+const conbtn = document.querySelector(".conbtn"),
+  navBtn1 = document.querySelector(".nav-btn1"),
+  navBtn2 = document.querySelector(".nav-btn2"),
+  navBtn3 = document.querySelector(".nav-btn3"),
+  navBtn4 = document.querySelector(".nav-btn4"),
+  navBtn5 = document.querySelector(".nav-btn5");
 
-const about = document.querySelector(".row");
-const skills = document.querySelector(".skills");
-const portfolio = document.querySelector(".portfolios");
-const services = document.querySelector(".services");
-const contact = document.querySelector(".contact");
+const about = document.querySelector(".row"),
+  skills = document.querySelector(".skills"),
+  portfolio = document.querySelector(".portfolios"),
+  services = document.querySelector(".services"),
+  contact = document.querySelector(".contact");
 
 navBtn2.addEventListener("click", () => {
   portfolio.classList.remove("sec-dis");
@@ -121,4 +121,19 @@ conbtn.addEventListener("click", () => {
   navBtn1.classList.remove("active");
   contact.classList.add("sec-dis");
   navBtn5.classList.add("active");
+});
+
+const portfolioInfoShow = document.querySelectorAll(".portfolio"),
+  imgBackgroundShow = document.querySelectorAll(".img");
+
+portfolioInfoShow.forEach((element) => {
+  element.addEventListener("click", () => {
+    element.classList.add("is-active");
+  });
+});
+
+imgBackgroundShow.forEach((element) => {
+  element.addEventListener("click", () => {
+    element.classList.add("is-active-background");
+  });
 });
