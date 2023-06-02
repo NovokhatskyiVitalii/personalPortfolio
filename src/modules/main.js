@@ -38,15 +38,28 @@ const about = document.querySelector(".row"),
   services = document.querySelector(".services"),
   contact = document.querySelector(".contact");
 
+navBtn1.addEventListener("click", () => {
+  portfolio.classList.remove("sec-dis");
+  navBtn3.classList.remove("active");
+  navBtn4.classList.remove("active");
+  contact.classList.remove("sec-dis");
+  navBtn5.classList.remove("active");
+  services.classList.remove("sec-dis");
+  navBtn2.classList.remove("active");
+  skills.classList.remove("sec-dis");
+
+  about.classList.add("sec-dis");
+  navBtn1.classList.add("active");
+  nav.classList.toggle("dis");
+  document.body.classList.toggle("overflow");
+});
+
 navBtn2.addEventListener("click", () => {
   portfolio.classList.remove("sec-dis");
   about.classList.remove("sec-dis");
   services.classList.remove("sec-dis");
-
   contact.classList.remove("sec-dis");
-
   navBtn5.classList.remove("active");
-
   navBtn1.classList.remove("active");
   navBtn3.classList.remove("active");
   navBtn4.classList.remove("active");
@@ -56,76 +69,65 @@ navBtn2.addEventListener("click", () => {
   nav.classList.toggle("dis");
   document.body.classList.toggle("overflow");
 });
-navBtn1.addEventListener("click", () => {
-  portfolio.classList.remove("sec-dis");
-  about.classList.add("sec-dis");
-  navBtn1.classList.add("active");
-  navBtn3.classList.remove("active");
-  navBtn4.classList.remove("active");
-  contact.classList.remove("sec-dis");
 
-  navBtn5.classList.remove("active");
-  services.classList.remove("sec-dis");
-  navBtn2.classList.remove("active");
-  skills.classList.remove("sec-dis");
-  nav.classList.toggle("dis");
-  document.body.classList.toggle("overflow");
-});
 navBtn3.addEventListener("click", () => {
-  portfolio.classList.add("sec-dis");
   about.classList.remove("sec-dis");
   navBtn1.classList.remove("active");
-  navBtn3.classList.add("active");
   navBtn4.classList.remove("active");
   contact.classList.remove("sec-dis");
-
   navBtn5.classList.remove("active");
   services.classList.remove("sec-dis");
   navBtn2.classList.remove("active");
   skills.classList.remove("sec-dis");
+
+  navBtn3.classList.add("active");
+  portfolio.classList.add("sec-dis");
   nav.classList.toggle("dis");
   document.body.classList.toggle("overflow");
 });
+
 navBtn4.addEventListener("click", () => {
   portfolio.classList.remove("sec-dis");
   about.classList.remove("sec-dis");
   navBtn1.classList.remove("active");
   navBtn3.classList.remove("active");
-  navBtn4.classList.add("active");
   contact.classList.remove("sec-dis");
-
   navBtn5.classList.remove("active");
-  services.classList.add("sec-dis");
   navBtn2.classList.remove("active");
   skills.classList.remove("sec-dis");
+
+  navBtn4.classList.add("active");
+  services.classList.add("sec-dis");
   nav.classList.toggle("dis");
   document.body.classList.toggle("overflow");
 });
+
 navBtn5.addEventListener("click", () => {
   portfolio.classList.remove("sec-dis");
   about.classList.remove("sec-dis");
   navBtn1.classList.remove("active");
   navBtn3.classList.remove("active");
   navBtn4.classList.remove("active");
-  contact.classList.add("sec-dis");
-
-  navBtn5.classList.add("active");
   services.classList.remove("sec-dis");
   navBtn2.classList.remove("active");
   skills.classList.remove("sec-dis");
+
+  contact.classList.add("sec-dis");
+  navBtn5.classList.add("active");
   nav.classList.toggle("dis");
   document.body.classList.toggle("overflow");
 });
+
 conbtn.addEventListener("click", () => {
   about.classList.remove("sec-dis");
   navBtn1.classList.remove("active");
+
   contact.classList.add("sec-dis");
   navBtn5.classList.add("active");
 });
 
 const portfolioInfoShow = document.querySelectorAll(".portfolio"),
-  imgBackgroundShow = document.querySelectorAll(".img"),
-  portfolioBtn = document.querySelectorAll(".portfolio-btn");
+  imgBackgroundShow = document.querySelectorAll(".img");
 
 portfolioInfoShow.forEach((element) => {
   element.addEventListener("click", () => {
