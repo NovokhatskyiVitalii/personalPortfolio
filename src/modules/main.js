@@ -124,16 +124,17 @@ conbtn.addEventListener("click", () => {
 });
 
 const portfolioInfoShow = document.querySelectorAll(".portfolio"),
-  imgBackgroundShow = document.querySelectorAll(".img");
+  imgBackgroundShow = document.querySelectorAll(".img"),
+  portfolioBtn = document.querySelectorAll(".portfolio-btn");
 
 portfolioInfoShow.forEach((element) => {
   element.addEventListener("click", () => {
-    element.classList.add("is-active");
+    element.classList.toggle("is-active");
   });
 });
 
 imgBackgroundShow.forEach((element) => {
   element.addEventListener("click", () => {
-    element.classList.add("is-active-background");
+    element.classList.toggle("is-active-background");
   });
 });

@@ -77,11 +77,13 @@
                 button {
                     opacity: 0;
                     transition: opacity .3s;
+                    pointer-events: none;
                 }
 
                 &:hover p,
                 &:hover button {
                     opacity: 1;
+                    pointer-events: auto;
                 }
 
 
@@ -97,6 +99,7 @@
                 & p,
                 & button {
                     opacity: 1;
+                    pointer-events: auto;
                 }
             }
 
